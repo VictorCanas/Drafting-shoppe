@@ -28,7 +28,7 @@ class ProductImagesService {
       mongo.db.collection('products').findOne({ _id: productObjectID }, {fields: {images: 1}}).then(product => {
         if(product && product.images && product.images.length > 0) {
           let images = product.images.map(image => {
-            image.url = url.resolve(generalSettings.domain, settings.productsUploadUrl + '/' + product._id + '/' + image.filename);
+            image.url = url.resolve(generalSettings.domain, settings.productsUploadUrl + '/' + image.filename);
             return image;
           })
 
@@ -54,7 +54,7 @@ class ProductImagesService {
         let imageData = images.find(i => i.id.toString() === imageId.toString());
         if(imageData) {
           let filename = imageData.filename;
-          let filepath = path.resolve(settings.productsUploadPath + '/' + productId + '/' + filename);
+          let filepath = path.resolve(settings.productsUploadPath + '/' + filename);
           fse.removeSync(filepath);
           return mongo.db.collection('products').updateOne({ _id: productObjectID }, { $pull: { images: { id: imageObjectID } } })
         } else {
