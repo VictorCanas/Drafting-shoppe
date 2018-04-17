@@ -78,3 +78,25 @@
 {"level":"info","message":"API running at http://localhost:3001","timestamp":"2018-04-17T17:33:59.871Z"}
 {"level":"info","message":"MongoDB connected successfully","timestamp":"2018-04-17T17:34:00.102Z"}
 {"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-17T17:34:07.458Z"}
+{"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-17T18:04:16.364Z"}
+{"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-17T18:05:05.573Z"}
+{"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-17T18:20:53.600Z"}
+{"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-17T18:21:03.633Z"}
+{"level":"info","message":"API running at http://localhost:3001","timestamp":"2018-04-17T18:21:40.974Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2018-04-17T18:21:41.056Z"}
+{"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-17T18:21:41.227Z"}
+{"level":"info","message":"API running at http://localhost:3001","timestamp":"2018-04-17T18:28:51.720Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2018-04-17T18:28:51.795Z"}
+{"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-17T18:28:52.003Z"}
+{"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-17T19:27:37.819Z"}
+{"level":"info","message":"API running at http://localhost:3001","timestamp":"2018-04-17T19:27:37.761Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2018-04-17T19:27:37.963Z"}
+{"level":"info","message":"API running at http://localhost:3001","timestamp":"2018-04-17T19:31:06.702Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2018-04-17T19:31:06.805Z"}
+{"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-17T19:31:06.877Z"}
+{"level":"info","message":"API running at http://localhost:3001","timestamp":"2018-04-17T19:33:00.332Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2018-04-17T19:33:00.431Z"}
+{"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-17T19:33:00.573Z"}
+{"level":"info","message":"API running at http://localhost:3001","timestamp":"2018-04-17T19:37:44.436Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2018-04-17T19:37:44.521Z"}
+{"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-17T19:37:44.693Z"}
