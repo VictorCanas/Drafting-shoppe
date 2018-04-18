@@ -7,8 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#1976D2">
   <link rel="manifest" href="/admin-assets/manifest.json">
-  <link rel="shortcut icon" href="/admin-assets/images/shortcut.png">
-<link href="/admin-assets/css/bundle-53a7e9dfbfa1a6a437f0e66159ee8a2a.css" rel="stylesheet"></head>
+  <link rel="shortcut icon" href="/admin-assets/images/shortcut.jpeg">
+  <link href="/admin-assets/css/bundle-53a7e9dfbfa1a6a437f0e66159ee8a2a.css" rel="stylesheet">
+</head>
 
 <body>
   <style>
@@ -137,15 +138,15 @@
     <div class="showbox">
       <div class="loader">
         <svg class="circular" viewBox="25 25 50 50">
-            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-          </svg>
+          <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
       </div>
     </div>
   </div>
 
   <script>
     function resizeElements() {
-      if(window.innerWidth >= 769) {
+      if (window.innerWidth >= 769) {
         var elContainer = document.getElementById('container');
         var elHeadContainer = document.getElementById('headContainer');
         var elBodyContainer = document.getElementById('bodyContainer');
@@ -158,8 +159,8 @@
     window.addEventListener('resize', resizeElements);
     window.addEventListener('load', resizeElements);
 
-    if("Notification" in window){
-      if(Notification.permission !== "denied") {
+    if ("Notification" in window) {
+      if (Notification.permission !== "denied") {
         Notification.requestPermission();
       }
     }
@@ -170,6 +171,8 @@
   <script src="/admin-assets/data/currencies.js"></script>
   <script src="/admin-assets/data/timezones.js"></script>
   <script src="/admin-assets/tinymce/tinymce-4.7.5.min.js" defer></script>
-<script type="text/javascript" src="/admin-assets/js/vendor-4ef6ce76843aecef3e74.js"></script><script type="text/javascript" src="/admin-assets/js/app-c40eb0fb0505feb6a278.js"></script></body>
+  <script type="text/javascript" src="/admin-assets/js/vendor-4ef6ce76843aecef3e74.js"></script>
+  <script type="text/javascript" src="/admin-assets/js/app-c40eb0fb0505feb6a278.js"></script>
+</body>
 
 </html>
