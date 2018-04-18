@@ -23,7 +23,7 @@ app.set('trust proxy', 1);
 app.use(helmet());
 app.get('/images/:entity/:id/:size/:filename', function (req, res, next) {
   // A stub of image resizing (can be done with Nginx)
-  var newUrl = '/images/' + req.params.entity + '/' + req.params.id + '/' + req.params.filename;
+  var newUrl = '/images/' + req.params.entity + '/'  + req.params.filename;
   req.url = newUrl;
   next();
 });

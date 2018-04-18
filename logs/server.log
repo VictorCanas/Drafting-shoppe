@@ -100,3 +100,18 @@
 {"level":"info","message":"API running at http://localhost:3001","timestamp":"2018-04-17T19:37:44.436Z"}
 {"level":"info","message":"MongoDB connected successfully","timestamp":"2018-04-17T19:37:44.521Z"}
 {"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-17T19:37:44.693Z"}
+{"level":"info","message":"API running at http://localhost:3001","timestamp":"2018-04-17T19:45:27.078Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2018-04-17T19:45:27.209Z"}
+{"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-17T19:45:27.398Z"}
+{"level":"info","message":"API running at http://localhost:3001","timestamp":"2018-04-17T20:42:45.391Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2018-04-17T20:42:45.935Z"}
+{"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-17T20:42:47.907Z"}
+{"level":"info","message":"API running at http://localhost:3001","timestamp":"2018-04-17T22:52:18.823Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2018-04-17T22:52:18.911Z"}
+{"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-17T22:52:19.218Z"}
+{"level":"info","message":"API running at http://localhost:3001","timestamp":"2018-04-17T23:03:34.424Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2018-04-17T23:03:34.546Z"}
+{"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-17T23:03:34.866Z"}
+{"level":"info","message":"API running at http://localhost:3001","timestamp":"2018-04-18T15:26:40.300Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2018-04-18T15:26:40.481Z"}
+{"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-18T15:26:42.824Z"}
