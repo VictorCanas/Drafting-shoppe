@@ -26,7 +26,7 @@ const getPaymentFormSettings = (options) => {
 
 const paymentNotification = (options) => {
   const { gateway, gatewaySettings, req, res } = options;
-  const settings = {'allow_sandbox': true};
+  const settings = { 'allow_sandbox': true };
   const params = req.body;
   const orderId = params.custom;
   const paymentCompleted = params.payment_status === 'Completed';
@@ -50,9 +50,9 @@ const paymentNotification = (options) => {
       });
     }
   })
-  .catch((e) => {
-    console.error(e);
-  })
+    .catch((e) => {
+      console.error(e);
+    })
 }
 
 const verify = (params, settings) => {
@@ -76,7 +76,7 @@ const verify = (params, settings) => {
       host: params.test_ipn ? SANDBOX_URL : REGULAR_URL,
       method: 'POST',
       path: '/cgi-bin/webscr',
-      headers: {'Content-Length': body.length}
+      headers: { 'Content-Length': body.length }
     };
 
     if (params.test_ipn && !settings.allow_sandbox) {

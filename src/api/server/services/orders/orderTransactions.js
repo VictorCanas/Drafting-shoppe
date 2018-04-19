@@ -8,7 +8,7 @@ const ObjectID = require('mongodb').ObjectID;
 const OrdersService = require('./orders');
 
 class OrdertTansactionsService {
-  constructor() {}
+  constructor() { }
 
   async addTransaction(order_id, data) {
     if (!ObjectID.isValid(order_id)) {
@@ -20,13 +20,17 @@ class OrdertTansactionsService {
     await mongo.db.collection('orders').updateOne({
       _id: orderObjectID
     }, {
-      $push: {
-        transactions: transaction
-      }
-    });
+        $push: {
+          transactions: transaction
+        }
+      });
 
     const order = await OrdersService.getSingleOrder(order_id);
     await webhooks.trigger({ event: webhooks.events.TRANSACTION_CREATED, payload: order });
+    console.log("**********PAYMENT SUCCESSFUL**********");
+    console.log(order_id);
+    console.log(data);
+    console.log(order);
     return order;
   }
 
@@ -42,8 +46,8 @@ class OrdertTansactionsService {
       _id: orderObjectID,
       'transactions.id': transactionObjectID
     }, {
-      $set: transaction
-    });
+        $set: transaction
+      });
 
     const order = await OrdersService.getSingleOrder(order_id);
     await webhooks.trigger({ event: webhooks.events.TRANSACTION_UPDATED, payload: order });
@@ -60,12 +64,12 @@ class OrdertTansactionsService {
     await mongo.db.collection('orders').updateOne({
       _id: orderObjectID
     }, {
-      $pull: {
-        transactions: {
-          id: transactionObjectID
+        $pull: {
+          transactions: {
+            id: transactionObjectID
+          }
         }
-      }
-    });
+      });
 
     const order = await OrdersService.getSingleOrder(order_id);
     await webhooks.trigger({ event: webhooks.events.TRANSACTION_DELETED, payload: order });
