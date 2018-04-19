@@ -1,33 +1,35 @@
 {
-  "name": "The Drafting Shoppe",
-  "version": "1.0",
-  "description": "React and Node.js based eCommerce platform.",
+  "name": "cezerin",
+  "version": "0.33.0",
+  "description": "Cezerin is React and Node.js based eCommerce platform. https://cezerin.com",
   "keywords": [
+    "cezerin",
     "ecommerce",
     "shopping cart",
     "shop",
     "cms"
   ],
-  "homepage": "https://github.com/VictorCanas/Drafting-shoppe",
+  "homepage": "https://cezerin.com",
+  "bugs": "https://github.com/cezerin/cezerin/issues",
   "license": "MIT",
   "author": {
-    "name": "Victor Canas",
-    "url": "https://github.com/VictorCanas"
+    "name": "Restmount <jsonmount@gmail.com>",
+    "url": "https://github.com/restmount"
   },
   "contributors": [
     {
-      "name": "Rob McCracken",
-      "url": "https://github.com/rmccracken"
+      "name": "Restmount <jsonmount@gmail.com>",
+      "url": "https://github.com/restmount"
     },
     {
-      "name": "Sahir Shehzad",
-      "url": "https://github.com/syedsshehzad"
+      "name": "Sergey Onufrienko <sergey@onufrienko.com>",
+      "url": "https://github.com/sonufrienko"
     }
   ],
   "main": "src/api/server/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/VictorCanas/Drafting-shoppe"
+    "url": "https://github.com/cezerin/cezerin"
   },
   "scripts": {
     "compile": "babel src/store -d dist/store --quiet",
