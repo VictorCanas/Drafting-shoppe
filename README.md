@@ -16,8 +16,6 @@ Built with:
 
 Before
 ![Before](https://s7.postimg.cc/ycmtcweaz/2018-04-18_18-24-38.png)
-After
-![After](https://s7.postimg.cc/58ylh0l61/2018-04-18_18-23-36.png)
 
 ## Store
 
