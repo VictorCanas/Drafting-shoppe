@@ -17,7 +17,7 @@ Built with:
 Before
 ![Before](https://s7.postimg.cc/ycmtcweaz/2018-04-18_18-24-38.png)
 
-## Store
+## Mobile Friendly
 
 Single-Page Application with React server-side rendering.
 
@@ -25,7 +25,7 @@ Single-Page Application with React server-side rendering.
 
 ## Search
 
-Ability to search for a specific image by title, descrition, and category
+Ability to search for a specific image by title, description, and category.
 
 ![The Drafting Shoppe](https://s7.postimg.cc/p4ukwdmq3/2018-04-18_18-22-53.png)
 
