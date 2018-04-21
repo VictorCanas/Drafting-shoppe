@@ -415,3 +415,9 @@
 {"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-21T05:09:25.750Z"}
 {"accepted":["victorcanasint@gmail.com"],"rejected":[],"response":"250 2.0.0 OK 1524287384 o84sm3621947qkh.15 - gsmtp","envelope":{"from":"noreply@draftingshoope.com","to":["victorcanasint@gmail.com"]},"messageId":"32c4a915-5342-bd1f-b8dd-b75e5bab87b8@draftingshoope.com","level":"info","message":"Email sent","timestamp":"2018-04-21T05:09:44.293Z"}
 {"level":"info","message":"MongoDB connection was closed","timestamp":"2018-04-21T05:17:08.217Z"}
+{"level":"info","message":"API running at http://localhost:3001","timestamp":"2018-04-21T05:17:49.895Z"}
+{"level":"info","message":"MongoDB connected successfully","timestamp":"2018-04-21T05:17:49.920Z"}
+{"level":"info","message":"Store running at http://localhost:3000","timestamp":"2018-04-21T05:17:49.921Z"}
+{"accepted":["victorcanasint@gmail.com"],"rejected":[],"response":"250 2.0.0 OK 1524287952 b12-v6sm6990227qtb.62 - gsmtp","envelope":{"from":"noreply@draftingshoope.com","to":["victorcanasint@gmail.com"]},"messageId":"c02c26a8-9757-7220-0986-ccee016d635f@draftingshoope.com","level":"info","message":"Email sent","timestamp":"2018-04-21T05:19:12.980Z"}
+{"accepted":["victorcanasint@gmail.com"],"rejected":[],"response":"250 2.0.0 OK 1524288010 z5-v6sm6818970qtb.88 - gsmtp","envelope":{"from":"noreply@draftingshoope.com","to":["victorcanasint@gmail.com"]},"messageId":"67f7b198-bc8d-107c-41df-082a8672d600@draftingshoope.com","level":"info","message":"Email sent","timestamp":"2018-04-21T05:20:11.199Z"}
+{"level":"info","message":"MongoDB connection was closed","timestamp":"2018-04-21T05:44:22.520Z"}
