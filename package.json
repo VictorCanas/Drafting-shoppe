@@ -95,6 +95,7 @@
     "redux-form": "^7.3.0",
     "redux-form-material-ui": "^4.3.3",
     "redux-thunk": "^2.2.0",
+    "request": "^2.85.0",
     "response-time": "^2.3.2",
     "sass-loader": "^6.0.7",
     "sitemap": "^1.13.0",

