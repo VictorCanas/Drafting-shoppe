@@ -47,5 +47,5 @@ app.get('*', pageRendering);
 
 var server = app.listen(settings.storeListenPort, function () {
   var serverAddress = server.address();
-  winston.info('Store running at http://localhost');
+  winston.info('Store running at http://localhost:' + serverAddress.port);
 });
