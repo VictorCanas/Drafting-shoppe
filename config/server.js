@@ -22,7 +22,7 @@ module.exports = {
   adminLoginUrl: '/admin/login',
 
   apiListenPort: 3001,
-  storeListenPort: 3000
+  storeListenPort: 3000,
 
   // used by API
   mongodbServerUrl: dbUrl,
