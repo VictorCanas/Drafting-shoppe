@@ -10,19 +10,19 @@ const dbUrl = `mongodb://${dbCred}${dbHost}:${dbPort}/${dbName}`;
 
 module.exports = {
   // used by Store (server side)
-  apiBaseUrl: `http://localhost:3001/api/v1`,
+  apiBaseUrl: `http://localhost:3000/api/v1`,
 
   // used by Store (server and client side)
-  ajaxBaseUrl: `http://localhost:3001/ajax`,
+  ajaxBaseUrl: `http://localhost:3000/ajax`,
 
   // Access-Control-Allow-Origin
-  storeBaseUrl: `http://localhost:3000`,
+  storeBaseUrl: `http://localhost`,
 
   // used by API
   adminLoginUrl: '/admin/login',
 
-  apiListenPort: 3001,
-  storeListenPort: 3000,
+  apiListenPort: 3000,
+  // storeListenPort: 3000
 
   // used by API
   mongodbServerUrl: dbUrl,
