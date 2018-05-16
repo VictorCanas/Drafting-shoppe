@@ -1,6 +1,6 @@
 # The Drafting Shoppe
 
-Our project focus on rebuilding a website for a business that sells monumental drawings. We use the latest technologies to build a new website with efficient use of the network. The new Drafting Shoppe website fetches a smaller amount of data for images, is mobile friendly, and a truly enjoyable experience for an end-user.
+The project focused on rebuilding a website for a business that sells monumental drawings by using the latest technologies in e-commerce for efficient use of the network. The new Drafting Shoppe website fetches a smaller amount of data for images, is mobile friendly, and a truly enjoyable experience for an end-user.
 
 Built with:
 
