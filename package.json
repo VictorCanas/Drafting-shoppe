@@ -32,7 +32,7 @@
     "url": "https://github.com/cezerin/cezerin"
   },
   "scripts": {
-    "compile": "babel src/store -d dist/store --quiet",
+    "compile": "babel --presets react --plugins transform-class-properties src/store -d dist/store --quiet",
     "compile:watch": "babel src/store -d dist/store --watch & babel theme/src -d theme/dist --watch",
     "webpack:admin": "webpack --config webpack.config.admin.js --mode production",
     "webpack:store": "webpack --config webpack.config.store.js --mode production",
@@ -40,7 +40,7 @@
     "webpack:store:watch": "webpack --config webpack.config.store.js --mode development --watch",
     "theme:install": "./scripts/theme-install.sh",
     "theme:export": "./scripts/theme-export.sh",
-    "theme:build": "babel theme/src -d theme/dist --quiet && npm run webpack:store",
+    "theme:build": "babel --presets react --plugins transform-class-properties theme/src -d theme/dist --quiet && npm run webpack:store",
     "build": "npm run compile && npm run theme:build && npm run webpack:admin",
     "build:watch": "npm run compile:watch & npm run webpack:store:watch & npm run webpack:admin:watch",
     "start-api": "node src/api/server/index.js",
@@ -76,7 +76,7 @@
     "moment": "^2.21.0",
     "mongodb": "^3.0.4",
     "node-fetch": "^2.1.1",
-    "node-sass": "^4.8.3",
+    "node-sass": "^4.9.3",
     "nodemailer": "^4.6.3",
     "nodemailer-smtp-transport": "^2.7.4",
     "query-string": "^5.1.1",
@@ -102,7 +102,7 @@
     "slug": "^0.9.1",
     "theme": "file:theme",
     "ua-parser-js": "^0.7.17",
-    "webpack": "^4.1.1",
+    "webpack": "^4.17.1",
     "webpack-cli": "^2.0.11",
     "winston": "^2.4.1",
     "ws": "^5.1.0"

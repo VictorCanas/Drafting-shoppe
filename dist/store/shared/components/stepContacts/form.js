@@ -165,26 +165,26 @@ var CheckoutStepContacts = function (_React$Component) {
       var _this2 = this;
 
       var _props = this.props,
-        handleSubmit = _props.handleSubmit,
-        pristine = _props.pristine,
-        invalid = _props.invalid,
-        valid = _props.valid,
-        reset = _props.reset,
-        submitting = _props.submitting,
-        loadingShippingMethods = _props.loadingShippingMethods,
-        loadingPaymentMethods = _props.loadingPaymentMethods,
-        initialValues = _props.initialValues,
-        settings = _props.settings,
-        saveShippingCountry = _props.saveShippingCountry,
-        saveShippingState = _props.saveShippingState,
-        saveShippingCity = _props.saveShippingCity,
-        saveShippingMethod = _props.saveShippingMethod,
-        savePaymentMethod = _props.savePaymentMethod,
-        paymentMethods = _props.paymentMethods,
-        shippingMethods = _props.shippingMethods,
-        inputClassName = _props.inputClassName,
-        buttonClassName = _props.buttonClassName,
-        editButtonClassName = _props.editButtonClassName;
+          handleSubmit = _props.handleSubmit,
+          pristine = _props.pristine,
+          invalid = _props.invalid,
+          valid = _props.valid,
+          reset = _props.reset,
+          submitting = _props.submitting,
+          loadingShippingMethods = _props.loadingShippingMethods,
+          loadingPaymentMethods = _props.loadingPaymentMethods,
+          initialValues = _props.initialValues,
+          settings = _props.settings,
+          saveShippingCountry = _props.saveShippingCountry,
+          saveShippingState = _props.saveShippingState,
+          saveShippingCity = _props.saveShippingCity,
+          saveShippingMethod = _props.saveShippingMethod,
+          savePaymentMethod = _props.savePaymentMethod,
+          paymentMethods = _props.paymentMethods,
+          shippingMethods = _props.shippingMethods,
+          inputClassName = _props.inputClassName,
+          buttonClassName = _props.buttonClassName,
+          editButtonClassName = _props.editButtonClassName;
 
 
       if (this.state.done) {
@@ -307,8 +307,7 @@ var CheckoutStepContacts = function (_React$Component) {
               {
                 type: 'button',
                 onClick: this.handleEdit,
-                className: editButtonClassName
-              },
+                className: editButtonClassName },
               _text2.default.edit
             )
           )
@@ -330,25 +329,20 @@ var CheckoutStepContacts = function (_React$Component) {
           _react2.default.createElement(
             'form',
             { onSubmit: handleSubmit },
-            !this.isFieldHidden('email') && _react2.default.createElement(_reduxForm.Field, {
-              className: inputClassName, name: 'email', id: 'customer.email', component: inputField, type: 'email',
+            !this.isFieldHidden('email') && _react2.default.createElement(_reduxForm.Field, { className: inputClassName, name: 'email', id: 'customer.email', component: inputField, type: 'email',
               label: this.getFieldLabel('email'),
               validate: this.getFieldValidators('email'),
-              placeholder: this.getFieldPlaceholder('email')
-            }),
-            !this.isFieldHidden('mobile') && _react2.default.createElement(_reduxForm.Field, {
-              className: inputClassName, name: 'mobile', id: 'customer.mobile', component: inputField, type: 'tel',
+              placeholder: this.getFieldPlaceholder('email') }),
+            !this.isFieldHidden('mobile') && _react2.default.createElement(_reduxForm.Field, { className: inputClassName, name: 'mobile', id: 'customer.mobile', component: inputField, type: 'tel',
               label: this.getFieldLabel('mobile'),
               validate: this.getFieldValidators('mobile'),
-              placeholder: this.getFieldPlaceholder('mobile')
-            }),
+              placeholder: this.getFieldPlaceholder('mobile') }),
             _react2.default.createElement(
               'h2',
               null,
               _text2.default.shippingTo
             ),
-            !this.isFieldHidden('country') && _react2.default.createElement(_reduxForm.Field, {
-              className: inputClassName, name: 'shipping_address.country', id: 'shipping_address.country', component: inputField, type: 'text',
+            !this.isFieldHidden('country') && _react2.default.createElement(_reduxForm.Field, { className: inputClassName, name: 'shipping_address.country', id: 'shipping_address.country', component: inputField, type: 'text',
               label: this.getFieldLabel('country'),
               validate: this.getFieldValidators('country'),
               placeholder: this.getFieldPlaceholder('country'),
@@ -356,10 +350,8 @@ var CheckoutStepContacts = function (_React$Component) {
                 return setTimeout(function () {
                   return saveShippingCountry(value);
                 });
-              }
-            }),
-            !this.isFieldHidden('state') && _react2.default.createElement(_reduxForm.Field, {
-              className: inputClassName, name: 'shipping_address.state', id: 'shipping_address.state', component: inputField, type: 'text',
+              } }),
+            !this.isFieldHidden('state') && _react2.default.createElement(_reduxForm.Field, { className: inputClassName, name: 'shipping_address.state', id: 'shipping_address.state', component: inputField, type: 'text',
               label: this.getFieldLabel('state'),
               validate: this.getFieldValidators('state'),
               placeholder: this.getFieldPlaceholder('state'),
@@ -367,10 +359,8 @@ var CheckoutStepContacts = function (_React$Component) {
                 return setTimeout(function () {
                   return saveShippingState(value);
                 });
-              }
-            }),
-            !this.isFieldHidden('city') && _react2.default.createElement(_reduxForm.Field, {
-              className: inputClassName, name: 'shipping_address.city', id: 'shipping_address.city', component: inputField, type: 'text',
+              } }),
+            !this.isFieldHidden('city') && _react2.default.createElement(_reduxForm.Field, { className: inputClassName, name: 'shipping_address.city', id: 'shipping_address.city', component: inputField, type: 'text',
               label: this.getFieldLabel('city'),
               validate: this.getFieldValidators('city'),
               placeholder: this.getFieldPlaceholder('city'),
@@ -378,8 +368,7 @@ var CheckoutStepContacts = function (_React$Component) {
                 return setTimeout(function () {
                   return saveShippingCity(value);
                 });
-              }
-            }),
+              } }),
             _react2.default.createElement(
               'h2',
               null,
@@ -486,8 +475,7 @@ var CheckoutStepContacts = function (_React$Component) {
                     _this2.handleSave();
                   }),
                   disabled: invalid,
-                  className: buttonClassName
-                },
+                  className: buttonClassName },
                 _text2.default.next
               )
             )

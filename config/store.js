@@ -2,5 +2,5 @@
 module.exports = {
   // store UI language
   language: 'en',
-  ajaxBaseUrl: 'http://localhost:3001/ajax'
+  ajaxBaseUrl: 'http://142.93.87.157/ajax'
 }
