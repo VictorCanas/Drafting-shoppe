@@ -10,13 +10,13 @@ const dbUrl = `mongodb://${dbCred}${dbHost}:${dbPort}/${dbName}`;
 
 module.exports = {
   // used by Store (server side)
-  apiBaseUrl: `http://142.93.87.157/api/v1`,
+  apiBaseUrl: `http://www.thedraftingshoppe.com/api/v1`,
 
   // used by Store (server and client side)
-  ajaxBaseUrl: `http://142.93.87.157/ajax`,
+  ajaxBaseUrl: `http://www.thedraftingshoppe.com/ajax`,
 
   // Access-Control-Allow-Origin
-  storeBaseUrl: `http://142.93.87.157`,
+  storeBaseUrl: `http://www.thedraftingshoppe.com`,
 
   // used by API
   adminLoginUrl: '/admin/login',

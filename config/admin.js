@@ -2,7 +2,7 @@
 module.exports = {
   // dashboard UI language
   language: 'en',
-  apiBaseUrl: 'http://142.93.87.157/api/v1',
-  apiWebSocketUrl: 'ws://142.93.87.157',
+  apiBaseUrl: 'http://www.thedraftingshoppe.com/api/v1',
+  apiWebSocketUrl: 'ws://www.thedraftingshoppe.com',
   developerMode: true
 }
