@@ -15,6 +15,10 @@ class ProductsService {
   constructor() {}
 
   async getProducts(params = {}) {
+    mongo.db.collection('products').createIndex({
+      name: "text"
+    });
+    
     const categories = await CategoriesService.getCategories({ fields: 'parent_id' });
     const fieldsArray = this.getArrayFromCSV(params.fields);
     const limit = parse.getNumberIfPositive(params.limit) || 1000;
@@ -370,12 +374,12 @@ class ProductsService {
 
   getMatchTextQuery({search}) {
     if (search && search.length > 0 && search !== 'null' && search !== 'undefined') {
-      return {
-        '$or': [
-          { sku: new RegExp(search, 'i') },
-          { '$text': { '$search': search } }
-        ]
-      }
+      // return {
+        // '$or': [
+          // { sku: new RegExp(search, 'i') },
+          return { '$text': { '$search': search } }
+        // ]
+      // }
     } else {
       return null;
     }
