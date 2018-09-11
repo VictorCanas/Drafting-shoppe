@@ -16,7 +16,7 @@ module.exports = {
   ajaxBaseUrl: `http://www.thedraftingshoppe.com/ajax`,
 
   // Access-Control-Allow-Origin
-  storeBaseUrl: `http://www.thedraftingshoppe.com`,
+  storeBaseUrl: [`http://thedraftingshoppe.com`, `http://www.thedraftingshoppe.com`],
 
   // used by API
   adminLoginUrl: '/admin/login',
