@@ -2,5 +2,5 @@
 module.exports = {
   // store UI language
   language: 'en',
-  ajaxBaseUrl: 'http://www.thedraftingshoppe.com/ajax'
+  ajaxBaseUrl: 'https://www.thedraftingshoppe.com/ajax'
 }
